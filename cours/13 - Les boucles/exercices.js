@@ -209,15 +209,32 @@ function exercice8(prochainClient) { // Ne supprimez/commentez pas cette ligne
   // <===== VOTRE CODE ICI: Insérez/modifiez le code à partir d'ici =====>
 
   // Décommentez le code de Tom ci-dessous
-  // let poidsClient = prochainClient.mesurerPoids();
-  // let sommePoidsPourCeTour = 0;
-  // let nombreDeTours = 0;
-  // // Comment faire ma boucle ici ?
-  // if (nombreDeTours === 0 || nombreDeTours === 1) {
-  //   console.log(nombreDeTours + " tour");
-  // } else {
-  //   console.log(nombreDeTours + " tours");
-  // }
+  let poidsClient = prochainClient.mesurerPoids();
+  let sommePoidsPourCeTour = 0;
+  let nombreDeTours = 0;
+  
+  while (poidsClient !== 0) {
+    sommePoidsPourCeTour += poidsClient;
+
+    if (sommePoidsPourCeTour > 500) {
+      nombreDeTours += 1;
+      sommePoidsPourCeTour = poidsClient;
+    }
+
+    poidsClient = prochainClient.mesurerPoids();
+  }
+
+  if (sommePoidsPourCeTour > 0) {
+    nombreDeTours = nombreDeTours + 1;
+  }
+  
+  if (nombreDeTours === 0 || nombreDeTours === 1) {
+    console.log(nombreDeTours + " tour");
+  } else {
+    console.log(nombreDeTours + " tours");
+  }
+  
+  
 
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
