@@ -213,21 +213,8 @@ function exercice8(prochainClient) { // Ne supprimez/commentez pas cette ligne
   let sommePoidsPourCeTour = 0;
   let nombreDeTours = 0;
   
-  while (poidsClient !== 0) {
-    sommePoidsPourCeTour += poidsClient;
-
-    if (sommePoidsPourCeTour > 500) {
-      nombreDeTours += 1;
-      sommePoidsPourCeTour = poidsClient;
-    }
-
-    poidsClient = prochainClient.mesurerPoids();
-  }
-
-  if (sommePoidsPourCeTour > 0) {
-    nombreDeTours = nombreDeTours + 1;
-  }
   
+
   if (nombreDeTours === 0 || nombreDeTours === 1) {
     console.log(nombreDeTours + " tour");
   } else {
