@@ -28,7 +28,7 @@ function maPremiereFonction() {
 
 // <===== VOTRE CODE ICI: Insérez/modifiez le code à partir d'ici =====>
 // Qu'est-ce que Tom a oublié de faire ? Rédigez le code manquant ci-dessous :
-
+maPremiereFonction();
 
 // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
