@@ -45,12 +45,15 @@ let adresseMagiciensDuCode = `MagiciensDuCode
 1337 POINT-VIRGULE`;
 // <===== VOTRE CODE ICI: Insérez/modifiez le code à partir d'ici =====>
 // Rédigez la fonction afficherTitre(titre) ci-dessous
-
+function afficherTitre(titre) {
+  console.log("===[ " + titre + " ]===");
+  console.log(adresseMagiciensDuCode);
+}
 
 // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
 // Voici le code de départ de Tom, décommentez-le.
-// afficherTitre("Notre adresse");
+afficherTitre("Notre adresse");
 // console.log(adresseMagiciensDuCode);
 
 // Exercice 2
@@ -61,20 +64,29 @@ let adresseMagiciensDuCode = `MagiciensDuCode
 // Modifiez la fonction afficherNumeroClient pour que le format du numéro client soit toujours correct
 function afficherNumeroClient(numero) {
   // <===== VOTRE CODE ICI: Insérez/modifiez le code à partir d'ici =====>
-  console.log("N° de client : " + numero);
+  if (numero < 10) {
+    console.log("N° de client : 42000" + numero);
+  } else if (numero < 100) {
+    console.log("N° de client : 4200" + numero);
+  } else if (numero < 1000) {
+    console.log("N° de client : 420" + numero);
+  } else if (numero < 10000) {
+    console.log("N° de client : 42" + numero);
+  }
+  
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 }
 
 // Voici le code de test qu'a déjà rédigé Tom, décommentez-le sans le modifier.
-// afficherNumeroClient(0);
-// afficherNumeroClient(1);
-// afficherNumeroClient(9);
-// afficherNumeroClient(10);
-// afficherNumeroClient(99);
-// afficherNumeroClient(100);
-// afficherNumeroClient(999);
-// afficherNumeroClient(1000);
-// afficherNumeroClient(9999);
+afficherNumeroClient(0);
+afficherNumeroClient(1);
+afficherNumeroClient(9);
+afficherNumeroClient(10);
+afficherNumeroClient(99);
+afficherNumeroClient(100);
+afficherNumeroClient(999);
+afficherNumeroClient(1000);
+afficherNumeroClient(9999);
 
 // Exercice 3
 // Pour faire cet exercice :
