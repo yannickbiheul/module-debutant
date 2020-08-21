@@ -208,12 +208,25 @@ function exercice8(prochainClient) { // Ne supprimez/commentez pas cette ligne
 
   // <===== VOTRE CODE ICI: Insérez/modifiez le code à partir d'ici =====>
 
-  // Décommentez le code de Tom ci-dessous
+  // On récupère le poids du 1er client
   let poidsClient = prochainClient.mesurerPoids();
+  // Somme des poids des clients pour le prochain tour
   let sommePoidsPourCeTour = 0;
+  // On compte le nombre de tours à faire en tout pour faire passer tout le monde
   let nombreDeTours = 0;
-  
-  
+
+  while (poidsClient !== 0) {
+    sommePoidsPourCeTour = sommePoidsPourCeTour + poidsClient;
+    if (sommePoidsPourCeTour > 500) {
+      nombreDeTours = nombreDeTours + 1;
+      sommePoidsPourCeTour = poidsClient;
+    }
+    poidsClient = prochainClient.mesurerPoids();
+  }
+
+  if (sommePoidsPourCeTour > 0) {
+    nombreDeTours = nombreDeTours + 1;
+  }
 
   if (nombreDeTours === 0 || nombreDeTours === 1) {
     console.log(nombreDeTours + " tour");
