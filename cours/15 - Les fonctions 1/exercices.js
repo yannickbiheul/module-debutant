@@ -92,32 +92,34 @@ afficherNumeroClient(9999);
 // Pour faire cet exercice :
 // 1. Décommentez le code sous la fonction afficherEntete()
 // 2. Complétez la fonction afficherEntete() comme il faut ci-dessous
+
 function afficherEntete(numeroClient) {
   afficherTitre("Notre adresse");
   // <===== VOTRE CODE ICI: Insérez/modifiez le code à partir d'ici =====>
   // Ici vous pouvez accéder à toutes les fonctions déclarées dans les exercices précédents.
   // Vous avez également accès à la variable adresseMagiciensDuCode, profitez-en ;).
-
+  console.log("\n===[ " + "Vos références " + "]===");
+  afficherNumeroClient(1337);
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 }
 // Décommentez le code ci-dessous pour commencer l'exercice
-// afficherEntete(1337);
+afficherEntete(1337);
 
 // Corrigez le bogue ! 0
 // Décommentez le code du stagiaire ci-dessous et corrigez tous les bogues !
-// function afficherPlusieursEtoiles(nombre) {
-//   let ligne = "";
-//   for (let position = 0; position <= nombre; position = position + 1) {
-//     ligne = ligne + "*";
-//   }
-//   console.log(ligne);
-// }
-// function afficherTriangleEtoile(longueurMax) {
-//   for (let position = 0; position < longueurMax; position = position + 1) {
-//     afficherPlusieursEtoiles(position);
-//   }
-//   for (let position = longueurMax - 2; position > 0; position = position - 2) {
-//     afficherPlusieursEtoiles(position);
-//   }
-// }
-// afficherTriangleEtoile(7);
+let ligne = "";
+function afficherPlusieursEtoiles(nombre) {
+  for (let position = 0; position <= nombre; position = position + 1) {
+    ligne = ligne + "*";
+  }
+  console.log(ligne);
+}
+function afficherTriangleEtoile(longueurMax) {
+  for (let position = 0; position < longueurMax; position = position + 1) {
+    afficherPlusieursEtoiles(position);
+  }
+  for (let position = longueurMax - 2; position > 0; position = position - 2) {
+    afficherPlusieursEtoiles(position);
+  }
+}
+afficherTriangleEtoile(7);
